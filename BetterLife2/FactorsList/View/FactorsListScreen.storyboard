@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cgH-Y4-Gv0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Факторы-->
+        <scene sceneID="IIy-nv-aiK">
+            <objects>
+                <viewController storyboardIdentifier="FactorsListViewController" title="Факторы" id="I4v-tG-w4P" customClass="FactorsListViewController" customModule="BetterLife2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g7c-f9-13M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nWL-qg-nDJ">
+                                <rect key="frame" x="20" y="108" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Все"/>
+                                    <segment title="Положительные"/>
+                                    <segment title="Отрицательные"/>
+                                </segments>
+                                <connections>
+                                    <action selector="positiveNegativeSCChanged:" destination="I4v-tG-w4P" eventType="valueChanged" id="Jit-TM-3aI"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tXn-E2-ePH">
+                                <rect key="frame" x="0.0" y="210" width="414" height="652"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="VVT-fA-j3G" detailTextLabel="3w6-8p-2s3" rowHeight="62" style="IBUITableViewCellStyleValue1" id="T0X-fh-vE4">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="62"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T0X-fh-vE4" id="4ZT-f9-hb6">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="62"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VVT-fA-j3G">
+                                                    <rect key="frame" x="20" y="21" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3w6-8p-2s3">
+                                                    <rect key="frame" x="331" y="21" width="44" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="N66-Dq-jqY">
+                                <rect key="frame" x="20" y="159" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Все"/>
+                                    <segment title="Внутренние"/>
+                                    <segment title="Внешние"/>
+                                </segments>
+                                <connections>
+                                    <action selector="internalExternalSCChanged:" destination="I4v-tG-w4P" eventType="valueChanged" id="vBx-Qb-OtF"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KHd-GW-fqE" firstAttribute="trailing" secondItem="nWL-qg-nDJ" secondAttribute="trailing" constant="20" id="5Po-dS-41Z"/>
+                            <constraint firstItem="KHd-GW-fqE" firstAttribute="bottom" secondItem="tXn-E2-ePH" secondAttribute="bottom" id="Ggt-So-htU"/>
+                            <constraint firstItem="nWL-qg-nDJ" firstAttribute="leading" secondItem="KHd-GW-fqE" secondAttribute="leading" constant="20" id="JKk-Mi-W1x"/>
+                            <constraint firstItem="tXn-E2-ePH" firstAttribute="top" secondItem="N66-Dq-jqY" secondAttribute="bottom" constant="20" id="LEt-CS-yt8"/>
+                            <constraint firstItem="KHd-GW-fqE" firstAttribute="trailing" secondItem="N66-Dq-jqY" secondAttribute="trailing" constant="20" id="LLB-pO-sUE"/>
+                            <constraint firstItem="tXn-E2-ePH" firstAttribute="leading" secondItem="KHd-GW-fqE" secondAttribute="leading" id="Qcu-2k-BPM"/>
+                            <constraint firstItem="nWL-qg-nDJ" firstAttribute="top" secondItem="KHd-GW-fqE" secondAttribute="top" constant="20" id="cWk-GB-BST"/>
+                            <constraint firstItem="KHd-GW-fqE" firstAttribute="trailing" secondItem="tXn-E2-ePH" secondAttribute="trailing" id="hqC-ZB-cG2"/>
+                            <constraint firstItem="N66-Dq-jqY" firstAttribute="top" secondItem="nWL-qg-nDJ" secondAttribute="bottom" constant="20" id="i7B-be-hHu"/>
+                            <constraint firstItem="N66-Dq-jqY" firstAttribute="leading" secondItem="KHd-GW-fqE" secondAttribute="leading" constant="20" id="puL-Hw-pzP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KHd-GW-fqE"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Факторы" id="UiB-it-Se7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ISY-UT-JpR">
+                            <connections>
+                                <action selector="addFactorButtonTapped:" destination="I4v-tG-w4P" id="3Nf-GY-Cz3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="internalExternalSC" destination="N66-Dq-jqY" id="LCS-Xr-1rC"/>
+                        <outlet property="positiveNegativeSC" destination="nWL-qg-nDJ" id="ttb-lB-fx1"/>
+                        <outlet property="tableView" destination="tXn-E2-ePH" id="hWo-JG-Jy3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CZL-wb-gPr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Is1-Ns-rzi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cgH-Y4-Gv0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X0N-Wg-eHE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="I4v-tG-w4P" kind="relationship" relationship="rootViewController" id="OZC-rY-bJt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GB7-ji-i3y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>

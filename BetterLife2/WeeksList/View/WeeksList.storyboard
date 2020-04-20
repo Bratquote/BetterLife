@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weeks List View Controller-->
+        <scene sceneID="nqN-AZ-tfg">
+            <objects>
+                <viewController storyboardIdentifier="WeeksListViewController" id="gbz-XR-3n9" customClass="WeeksListViewController" customModule="BetterLife2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uo9-0f-eCD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jX8-ye-AEg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeeksListCell" rowHeight="83" id="cCS-4O-yc3" customClass="WeeksListCell" customModule="BetterLife2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="83"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cCS-4O-yc3" id="1UE-xm-MBF">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Неделя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAm-7N-d7m">
+                                                    <rect key="frame" x="20" y="11" width="80" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="Wcr-jC-KKO"/>
+                                                        <constraint firstAttribute="width" constant="80" id="hgr-Ul-TSK"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="с 6.04.2020 по 12.04.2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYT-HV-j8R">
+                                                    <rect key="frame" x="20" y="41" width="267" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="IeX-Lv-Mc2"/>
+                                                        <constraint firstAttribute="width" constant="267" id="jze-aV-6hj"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-more_than" translatesAutoresizingMaskIntoConstraints="NO" id="kaJ-d2-XxC">
+                                                    <rect key="frame" x="376" y="26.5" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="UGc-Yp-q7X"/>
+                                                        <constraint firstAttribute="height" constant="30" id="pat-fa-oux"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="kaJ-d2-XxC" secondAttribute="trailing" constant="8" id="ECV-JY-WEm"/>
+                                                <constraint firstItem="TAm-7N-d7m" firstAttribute="top" secondItem="1UE-xm-MBF" secondAttribute="topMargin" id="JcK-2r-gL4"/>
+                                                <constraint firstItem="JYT-HV-j8R" firstAttribute="top" secondItem="TAm-7N-d7m" secondAttribute="bottom" constant="8" id="hLs-bg-w7T"/>
+                                                <constraint firstItem="JYT-HV-j8R" firstAttribute="leading" secondItem="1UE-xm-MBF" secondAttribute="leadingMargin" id="nZv-f8-cix"/>
+                                                <constraint firstItem="TAm-7N-d7m" firstAttribute="leading" secondItem="1UE-xm-MBF" secondAttribute="leadingMargin" id="rvu-Pk-yMA"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="JYT-HV-j8R" secondAttribute="bottom" constant="7" id="wSu-xj-1RF"/>
+                                                <constraint firstItem="kaJ-d2-XxC" firstAttribute="centerY" secondItem="1UE-xm-MBF" secondAttribute="centerY" id="wVq-nU-OPc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="periodLabel" destination="JYT-HV-j8R" id="o3r-wW-Zii"/>
+                                            <outlet property="weekLabel" destination="TAm-7N-d7m" id="p65-cQ-OEG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jX8-ye-AEg" firstAttribute="leading" secondItem="Khf-BP-aWp" secondAttribute="leading" id="HDM-ra-UeW"/>
+                            <constraint firstItem="jX8-ye-AEg" firstAttribute="trailing" secondItem="Khf-BP-aWp" secondAttribute="trailing" id="NQ6-i4-fGj"/>
+                            <constraint firstItem="jX8-ye-AEg" firstAttribute="top" secondItem="Khf-BP-aWp" secondAttribute="top" id="Y5E-4h-eD3"/>
+                            <constraint firstItem="jX8-ye-AEg" firstAttribute="bottom" secondItem="Khf-BP-aWp" secondAttribute="bottom" id="yek-Pa-cYA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Khf-BP-aWp"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="Rhe-fh-hig"/>
+                    <connections>
+                        <outlet property="tableView" destination="jX8-ye-AEg" id="XzT-wk-t7c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kam-Ul-Zz1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="72.991071428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-more_than" width="100" height="100"/>
+    </resources>
+</document>
