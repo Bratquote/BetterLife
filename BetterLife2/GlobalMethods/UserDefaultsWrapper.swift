@@ -68,4 +68,20 @@ class UserDefaultsWrapper {
         UserDefaults.standard.set(date, forKey: "firstMonday")
     }
     
+    
+    static func saveSWOTItem(_ item: SWOTItem) {
+        var list = getSWOTList()
+        list.append(item)
+        
+         UserDefaults.standard.set(try? PropertyListEncoder().encode(list), forKey: "SWOTList")
+    }
+    
+    static func getSWOTList() -> [SWOTItem] {
+        if let data = UserDefaults.standard.value(forKey: "SWOTList") as? Data {
+            let list = try? PropertyListDecoder().decode([SWOTItem].self, from: data)
+            return list ?? []
+        }
+        return []
+    }
+    
 }

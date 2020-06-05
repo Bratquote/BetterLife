@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="02K-HH-j1I">
-                                <rect key="frame" x="0.0" y="89" width="414" height="773"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SWOTHeaderCell" id="F0o-Cz-nXi" customClass="SWOTHeaderCell" customModule="BetterLife2" customModuleProvider="target">
@@ -197,13 +197,23 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hy-FX-XOP">
+                                <rect key="frame" x="0.0" y="88" width="414" height="0.0"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="Erh-uc-yWk"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="QS0-rY-TTD" firstAttribute="trailing" secondItem="0hy-FX-XOP" secondAttribute="trailing" id="Dll-qA-kdW"/>
                             <constraint firstItem="02K-HH-j1I" firstAttribute="bottom" secondItem="QS0-rY-TTD" secondAttribute="bottom" id="GUa-El-PQQ"/>
                             <constraint firstItem="02K-HH-j1I" firstAttribute="trailing" secondItem="QS0-rY-TTD" secondAttribute="trailing" id="HiM-0x-XQk"/>
+                            <constraint firstItem="0hy-FX-XOP" firstAttribute="top" secondItem="QS0-rY-TTD" secondAttribute="top" id="Qjz-n3-BGy"/>
+                            <constraint firstItem="0hy-FX-XOP" firstAttribute="leading" secondItem="QS0-rY-TTD" secondAttribute="leading" id="fYr-LU-w1e"/>
                             <constraint firstItem="02K-HH-j1I" firstAttribute="leading" secondItem="QS0-rY-TTD" secondAttribute="leading" id="h3z-Jp-Wwe"/>
-                            <constraint firstItem="02K-HH-j1I" firstAttribute="top" secondItem="QS0-rY-TTD" secondAttribute="top" constant="1" id="xzG-VV-mJy"/>
+                            <constraint firstItem="02K-HH-j1I" firstAttribute="top" secondItem="0hy-FX-XOP" secondAttribute="bottom" id="n95-2o-rFJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QS0-rY-TTD"/>
                     </view>

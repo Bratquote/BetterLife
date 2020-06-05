@@ -4,6 +4,7 @@
 target 'BetterLife2' do
   # Comment the next line if you don't want to use dynamic frameworks
 	pod 'IQKeyboardManagerSwift'
+	pod 'Charts'
   use_frameworks!
 
   # Pods for BetterLife2

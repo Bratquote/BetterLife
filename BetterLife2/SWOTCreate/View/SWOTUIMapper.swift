@@ -20,7 +20,7 @@ class SWOTUIMapper: BaseUIMapper {
             return "SWOTHeaderCell"
         case is TextFieldItem:
             return "SWOTTextFieldCell"
-        case is QLItem:
+        case is SWOTCharacteristic:
             return "SWOTStepperCell"
         case is String:
             return "SWOTCreateButtonCell"

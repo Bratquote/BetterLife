@@ -16,6 +16,8 @@ class SWOTHeaderCell: UITableViewCell, ComponentCell {
     func initCell(item: Any) {
         guard let item = item as? HeaderItem else {return}
         headerLabel.text = item.text
+        //headerLabel.textColor = UIColor.white
+        //backgroundColor = Defaults.mainColor
     }
     
     override func awakeFromNib() {

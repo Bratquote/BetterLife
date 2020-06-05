@@ -13,6 +13,7 @@ extension UIView {
     
     func setRound() {
         self.layer.cornerRadius = 10
+        self.layer.masksToBounds = true
     }
     
     func setDefaulColor() {

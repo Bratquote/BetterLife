@@ -19,4 +19,29 @@ class MainScreenRouter {
         let vc = SWOTCreateAssembler().assemble()
         self.viewController.show(vc, sender: nil)
     }
+    
+    func openCityList() {
+        let vc = PlaceToVisitListAssembler().asseble()
+        self.viewController.show(vc, sender: nil)
+    }
+    
+    func openPeopleList() {
+        let vc = PeopleToRememberAssembler().assemble()
+        self.viewController.show(vc, sender: nil)
+    }
+    
+    func openTodayTasks() {
+        let vc = TargetsListAssembler().assembler(dateItem: DateItem(type: .week, value: "", parent: nil, date: Date.today().previous(.monday, considerToday: true)))
+        self.viewController.show(vc, sender: nil)
+    }
+    
+    func openInstruction() {
+        let vc = InstructionAssembler().assemble()
+        self.viewController.show(vc, sender: nil)
+    }
+    
+    func openSWOTList() {
+        let vc = SWOTListAssembler().assemble()
+        self.viewController.show(vc, sender: nil)
+    }
 }

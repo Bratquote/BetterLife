@@ -19,4 +19,8 @@ class QLListRouter {
         let vc = QLCreateAssembler().assemble()
         viewController.show(vc, sender: nil)
     }
+    func openQLEdit(item: QLItem) {
+        let vc = QLCreateAssembler().assemble(item: item)
+        viewController.show(vc, sender: nil)
+    }
 }

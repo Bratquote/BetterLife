@@ -22,8 +22,17 @@ class QLLifeCell: UITableViewCell {
 
     func initCell(item: QLItem) {
         nameLabel.text = item.name
-        categoryLabel.text = item.category.rawValue
+        categoryLabel.isHidden = true
         satisfactionLabel.text = "\(item.satisfaction)"
+        importantLabel.text = "\(item.important)"
+    }
+    
+    func initCell(item: WeekItem) {
+        //.date!.next(.sunday).getDateString()
+        let lastDate = Date(dateString: item.date).next(.sunday, considerToday: false).getDateString()
+        nameLabel.text = "с \(item.date) по \(lastDate)"
+        categoryLabel.text = ""
+        satisfactionLabel.text = "\(item.happiness)"
         importantLabel.text = "\(item.important)"
     }
     

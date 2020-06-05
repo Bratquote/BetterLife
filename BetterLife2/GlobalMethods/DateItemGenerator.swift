@@ -13,7 +13,6 @@ class DateItemGenerator {
     
     func generateKids(item: DateItem) -> [DateItem] {
         var list: [DateItem] = []
-        
         switch item.type {
         case .years:
             list.append(DateItem(type: .year, value: "2020", parent: nil, date: Date(year: 2020)))

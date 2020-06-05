@@ -15,6 +15,7 @@ class WeeksListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.prefersLargeTitles = true
         setupTableView()
         list = DateItemGenerator().generateWeeks()
         // Do any additional setup after loading the view.

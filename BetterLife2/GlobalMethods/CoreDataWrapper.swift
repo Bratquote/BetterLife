@@ -472,7 +472,68 @@ class CoreDataWrapper {
         return list
     }
     
+    static func updateWeekInfo(item: WeekItem, action: ActionType) {
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "WeekInfo")
+        
+        switch action {
+        case .create:
+            let factorsEntity =
+                            NSEntityDescription.entity(forEntityName: "WeekInfo",
+                                                             in: managedContext)!
+            let newItem = NSManagedObject(entity: factorsEntity, insertInto: managedContext)
+            newItem.setValue(item.date, forKey: "date")
+            newItem.setValue(item.happiness, forKey: "happiness")
+            newItem.setValue(item.important, forKey: "important")
+            break
+        case .edit:
+            fetchRequest.predicate = NSPredicate(format: "date = \"\(item.date)\"")
+            do {
+                if let oldItem = try managedContext.fetch(fetchRequest).first {
+                    oldItem.setValue(item.date, forKey: "date")
+                    oldItem.setValue(item.happiness, forKey: "happiness")
+                    oldItem.setValue(item.important, forKey: "important")
+                }
+            } catch {
+                print(error)
+            }
+            
+            break
+        case .delete:
+                    fetchRequest.predicate = NSPredicate(format: "date = \"\(item.date)\"")
+                       do {
+                            if let factor = try managedContext.fetch(fetchRequest).first {
+                            managedContext.delete(factor)
+                            }
+                        } catch {
+                            print(error)
+                        }
+            break
+            
+           
+        }
+        do {
+            try managedContext.save()
+        } catch {
+            print(error)
+        }
+    }
+    
+    static func getWeekList() -> [WeekItem] {
+         var list: [WeekItem] = []
+            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "WeekInfo")
+            do {
+                let items = try managedContext.fetch(fetchRequest)
+                for i in items {
+                    let item: WeekItem = WeekItem(date: i.value(forKey: "date") as! String,
+                                                   important: i.value(forKey: "important") as! Int,
+                                                   happiness: i.value(forKey: "happiness") as! Int)
+                    list.append(item)
+                }
+            } catch {
+                print(error)
+            }
+        return list
+    }
+    
 }
-
-
 

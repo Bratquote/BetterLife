@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,9 +25,6 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Список мест, которые вам хотелось бы посетить (вы посетили) в этом году" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WNm-0g-stb">
                                             <rect key="frame" x="8" y="16" width="398" height="57"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="57" id="QkX-KR-N0l"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -71,7 +68,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="njM-9r-Q60"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Города" id="Iz4-Ww-Q6d"/>
+                    <navigationItem key="navigationItem" title="Города" largeTitleDisplayMode="always" id="Iz4-Ww-Q6d"/>
                     <connections>
                         <outlet property="tableView" destination="GwH-h1-wn6" id="bTd-57-Qkv"/>
                     </connections>

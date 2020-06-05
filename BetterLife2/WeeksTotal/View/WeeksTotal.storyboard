@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Итоги недель-->
+        <scene sceneID="tsa-rX-b3B">
+            <objects>
+                <viewController storyboardIdentifier="WeeksTotalViewController" id="Cyw-Vh-UBS" customClass="WeeksTotalViewController" customModule="BetterLife2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jor-Oj-PTC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Shr-vA-C1l">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Shr-vA-C1l" firstAttribute="leading" secondItem="B52-sf-cOr" secondAttribute="leading" id="6n8-8N-e8K"/>
+                            <constraint firstItem="Shr-vA-C1l" firstAttribute="trailing" secondItem="B52-sf-cOr" secondAttribute="trailing" id="Hsj-bj-J8V"/>
+                            <constraint firstItem="Shr-vA-C1l" firstAttribute="top" secondItem="B52-sf-cOr" secondAttribute="top" id="Jd0-WX-Mjc"/>
+                            <constraint firstItem="Shr-vA-C1l" firstAttribute="bottom" secondItem="B52-sf-cOr" secondAttribute="bottom" id="w9W-VP-UZz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="B52-sf-cOr"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Итоги недель" largeTitleDisplayMode="always" id="b8O-7Q-aBJ"/>
+                    <connections>
+                        <outlet property="tableView" destination="Shr-vA-C1l" id="UM4-sl-4Yx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7KX-27-K8q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1339.1304347826087" y="-190.17857142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qH2-h7-wIU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mFl-M4-d6f" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RJe-cJ-zvs">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Cyw-Vh-UBS" kind="relationship" relationship="rootViewController" id="KXt-NU-v1w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="crl-0z-3TE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="428.98550724637687" y="-190.17857142857142"/>
+        </scene>
+    </scenes>
+</document>

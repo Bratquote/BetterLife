@@ -9,6 +9,7 @@
 import Foundation
 
 struct TextFieldItem {
+    var emotion: EmotionType
     var placeHolder: String
     var value: String = ""
 }

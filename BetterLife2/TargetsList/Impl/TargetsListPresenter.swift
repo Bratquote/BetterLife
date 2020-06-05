@@ -22,6 +22,14 @@ class TargetsListPresenter {
         
         let items = DateItemGenerator().generateKids(item: item)
         
+        if item.type == .week {
+            if let i = CoreDataWrapper.getWeekList().first(where: {$0.date == item.date!.getDateString()}) {
+                list.append("\(i.important),\(i.happiness)")
+            } else {
+                list.append("\(0),\(0)")
+            }
+            //list.append("\(0),\(0)")
+        }
         
         if item.type == .years || item.type == .year || item.type == .week {
         for i in items {
@@ -65,5 +73,16 @@ class TargetsListPresenter {
     
     func deleteTarget(item: TargetItem) {
         CoreDataWrapper.updateTarget(item: item, action: .delete)
+    }
+    
+    
+    func updateWeekMark(item: DateItem, important: Int, happiness: Int) {
+        if let i = CoreDataWrapper.getWeekList().first(where: {$0.date == item.date!.getDateString()}) {
+            CoreDataWrapper.updateWeekInfo(item: WeekItem(date: item.date!.getDateString(), important: important, happiness: happiness), action: .edit)
+        }
+        else {
+            CoreDataWrapper.updateWeekInfo(item: WeekItem(date: item.date!.getDateString(), important: important, happiness: happiness), action: .create)
+        }
+        
     }
 }

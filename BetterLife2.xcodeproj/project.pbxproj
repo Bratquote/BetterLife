@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -51,12 +51,22 @@
 		9E575615243C92B80066D11C /* WeeksListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E575614243C92B80066D11C /* WeeksListRouter.swift */; };
 		9E575617243C93470066D11C /* WeeksListAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E575616243C93470066D11C /* WeeksListAssembler.swift */; };
 		9E575619243C94030066D11C /* WeeksList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E575618243C94030066D11C /* WeeksList.storyboard */; };
-		9E57561B243C95840066D11C /* WeeksListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E57561A243C95840066D11C /* WeeksListCell.swift */; };
 		9E57561F243E06050066D11C /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E57561E243E06050066D11C /* Notes.storyboard */; };
 		9E5CABCE240BC8F600D9E204 /* PersonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5CABCD240BC8F600D9E204 /* PersonItem.swift */; };
 		9E5CABD2240BCB8300D9E204 /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5CABD1240BCB8300D9E204 /* UserDefaultsWrapper.swift */; };
 		9E5CABD4240BCDB700D9E204 /* CoreDataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5CABD3240BCDB700D9E204 /* CoreDataWrapper.swift */; };
 		9E5CABD6240BD73500D9E204 /* ItemsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5CABD5240BD73500D9E204 /* ItemsType.swift */; };
+		9E711D572451FED600153B7C /* NoFactorsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E711D562451FED600153B7C /* NoFactorsCell.swift */; };
+		9E711D5C2452025900153B7C /* WeeksTotal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E711D5B2452025900153B7C /* WeeksTotal.storyboard */; };
+		9E711D5E245202CB00153B7C /* QLLifeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E711D5D245202CB00153B7C /* QLLifeCell.xib */; };
+		9E711D602452032E00153B7C /* WeeksTotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E711D5F2452032E00153B7C /* WeeksTotalViewController.swift */; };
+		9E711D622452033D00153B7C /* WeeksTotalRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E711D612452033D00153B7C /* WeeksTotalRouter.swift */; };
+		9E711D642452036300153B7C /* WeeksTotalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E711D632452036300153B7C /* WeeksTotalPresenter.swift */; };
+		9E711D66245203C100153B7C /* WeeksTotalAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E711D65245203C100153B7C /* WeeksTotalAssembler.swift */; };
+		9E711D682452057800153B7C /* HotCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E711D672452057800153B7C /* HotCode.swift */; };
+		9E711D6A2452074900153B7C /* WeeksListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E711D692452074900153B7C /* WeeksListCell.swift */; };
+		9E711D6C24520BC100153B7C /* MarkThisWeekCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E711D6B24520BC100153B7C /* MarkThisWeekCell.swift */; };
+		9E711D6E24521A1700153B7C /* WeekItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E711D6D24521A1700153B7C /* WeekItem.swift */; };
 		9E7F1E4F2433C45F0084F244 /* TargetsListUIMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7F1E4E2433C45F0084F244 /* TargetsListUIMapper.swift */; };
 		9E84C2F6244CB948005E9581 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E84C2F5244CB948005E9581 /* MainScreenViewController.swift */; };
 		9E84C2F9244CB964005E9581 /* MainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E84C2F8244CB964005E9581 /* MainScreenPresenter.swift */; };
@@ -82,6 +92,10 @@
 		9EB52C1E243472190077B23D /* DateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB52C1D243472190077B23D /* DateItem.swift */; };
 		9EB52C202434773F0077B23D /* DateItemGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB52C1F2434773F0077B23D /* DateItemGenerator.swift */; };
 		9EB52C22243493080077B23D /* FoundationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB52C21243493080077B23D /* FoundationExtension.swift */; };
+		9EC1DBC8247C3C59000CD7C0 /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC1DBC7247C3C59000CD7C0 /* InstructionViewController.swift */; };
+		9EC1DBCA247C3C6C000CD7C0 /* InstructionScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EC1DBC9247C3C6C000CD7C0 /* InstructionScreen.storyboard */; };
+		9EC1DBCC247ED192000CD7C0 /* InstructionLastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC1DBCB247ED192000CD7C0 /* InstructionLastViewController.swift */; };
+		9EC1DBCE247ED1D0000CD7C0 /* InstructionAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC1DBCD247ED1D0000CD7C0 /* InstructionAssembler.swift */; };
 		9EEE71F8241BB551007BA5AE /* EmotionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE71F7241BB551007BA5AE /* EmotionType.swift */; };
 		9EEE71FA241BB5AF007BA5AE /* PositionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE71F9241BB5AF007BA5AE /* PositionType.swift */; };
 		9EEE71FC241BC14E007BA5AE /* FactorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE71FB241BC14E007BA5AE /* FactorItem.swift */; };
@@ -99,6 +113,23 @@
 		9EEE721C241D09FC007BA5AE /* SWOTCreatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE721B241D09FC007BA5AE /* SWOTCreatePresenter.swift */; };
 		9EEE721E241D0A0A007BA5AE /* SWOTCreateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE721D241D0A0A007BA5AE /* SWOTCreateRouter.swift */; };
 		9EEE7220241D0ED3007BA5AE /* SWOTCreateAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE721F241D0ED3007BA5AE /* SWOTCreateAssembler.swift */; };
+		9EF90CD6245983F500260A45 /* WeeksStatistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EF90CD5245983F500260A45 /* WeeksStatistics.storyboard */; };
+		9EF90CD82459840B00260A45 /* WeeksStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF90CD72459840B00260A45 /* WeeksStatisticsViewController.swift */; };
+		9EF90CDB245985A500260A45 /* WeeksStatisticsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF90CDA245985A500260A45 /* WeeksStatisticsPresenter.swift */; };
+		9EF90CDD245985AB00260A45 /* WeeksStatisticsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF90CDC245985AB00260A45 /* WeeksStatisticsRouter.swift */; };
+		9EF90CDF2459861600260A45 /* WeeksStatisticsAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF90CDE2459861600260A45 /* WeeksStatisticsAssembler.swift */; };
+		9EF90CE4245AE50E00260A45 /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF90CE3245AE50E00260A45 /* DrawViewController.swift */; };
+		9EF90CE6245AE52000260A45 /* DrawScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EF90CE5245AE52000260A45 /* DrawScreen.storyboard */; };
+		9EF90CE8245AFB0E00260A45 /* SWOTItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF90CE7245AFB0E00260A45 /* SWOTItem.swift */; };
+		9EF90CEA245AFE2B00260A45 /* SWOTCharacteristic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF90CE9245AFE2B00260A45 /* SWOTCharacteristic.swift */; };
+		9EF90CEC245B39CD00260A45 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF90CEB245B39CD00260A45 /* Defaults.swift */; };
+		9EF90CF1245B404500260A45 /* SWOTList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EF90CF0245B404500260A45 /* SWOTList.storyboard */; };
+		9EF90CF3245B404E00260A45 /* SWOTListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF90CF2245B404E00260A45 /* SWOTListViewController.swift */; };
+		9EF90CF5245B438B00260A45 /* SWOTListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF90CF4245B438B00260A45 /* SWOTListPresenter.swift */; };
+		9EF90CF7245B43A700260A45 /* SWOTListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF90CF6245B43A700260A45 /* SWOTListRouter.swift */; };
+		9EF90CF9245B43C700260A45 /* SWOTListAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF90CF8245B43C700260A45 /* SWOTListAssembler.swift */; };
+		9EF90CFB245B444F00260A45 /* SWOTListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF90CFA245B444F00260A45 /* SWOTListCell.swift */; };
+		9EF90CFD245B449A00260A45 /* SWOTCharacteristicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF90CFC245B449A00260A45 /* SWOTCharacteristicCell.swift */; };
 		A94BEE4C69930FA3CE456864 /* Pods_BetterLife2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F1E067F3BC67E46A2B9F82F /* Pods_BetterLife2Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -171,12 +202,22 @@
 		9E575614243C92B80066D11C /* WeeksListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeksListRouter.swift; sourceTree = "<group>"; };
 		9E575616243C93470066D11C /* WeeksListAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeksListAssembler.swift; sourceTree = "<group>"; };
 		9E575618243C94030066D11C /* WeeksList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeeksList.storyboard; sourceTree = "<group>"; };
-		9E57561A243C95840066D11C /* WeeksListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeksListCell.swift; sourceTree = "<group>"; };
 		9E57561E243E06050066D11C /* Notes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		9E5CABCD240BC8F600D9E204 /* PersonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonItem.swift; sourceTree = "<group>"; };
 		9E5CABD1240BCB8300D9E204 /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
 		9E5CABD3240BCDB700D9E204 /* CoreDataWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataWrapper.swift; sourceTree = "<group>"; };
 		9E5CABD5240BD73500D9E204 /* ItemsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsType.swift; sourceTree = "<group>"; };
+		9E711D562451FED600153B7C /* NoFactorsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoFactorsCell.swift; sourceTree = "<group>"; };
+		9E711D5B2452025900153B7C /* WeeksTotal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeeksTotal.storyboard; sourceTree = "<group>"; };
+		9E711D5D245202CB00153B7C /* QLLifeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QLLifeCell.xib; sourceTree = "<group>"; };
+		9E711D5F2452032E00153B7C /* WeeksTotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeksTotalViewController.swift; sourceTree = "<group>"; };
+		9E711D612452033D00153B7C /* WeeksTotalRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeksTotalRouter.swift; sourceTree = "<group>"; };
+		9E711D632452036300153B7C /* WeeksTotalPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeksTotalPresenter.swift; sourceTree = "<group>"; };
+		9E711D65245203C100153B7C /* WeeksTotalAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeksTotalAssembler.swift; sourceTree = "<group>"; };
+		9E711D672452057800153B7C /* HotCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotCode.swift; sourceTree = "<group>"; };
+		9E711D692452074900153B7C /* WeeksListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeksListCell.swift; sourceTree = "<group>"; };
+		9E711D6B24520BC100153B7C /* MarkThisWeekCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkThisWeekCell.swift; sourceTree = "<group>"; };
+		9E711D6D24521A1700153B7C /* WeekItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekItem.swift; sourceTree = "<group>"; };
 		9E7F1E4E2433C45F0084F244 /* TargetsListUIMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetsListUIMapper.swift; sourceTree = "<group>"; };
 		9E84C2F5244CB948005E9581 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		9E84C2F8244CB964005E9581 /* MainScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresenter.swift; sourceTree = "<group>"; };
@@ -202,6 +243,10 @@
 		9EB52C1D243472190077B23D /* DateItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateItem.swift; sourceTree = "<group>"; };
 		9EB52C1F2434773F0077B23D /* DateItemGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateItemGenerator.swift; sourceTree = "<group>"; };
 		9EB52C21243493080077B23D /* FoundationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationExtension.swift; sourceTree = "<group>"; };
+		9EC1DBC7247C3C59000CD7C0 /* InstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
+		9EC1DBC9247C3C6C000CD7C0 /* InstructionScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InstructionScreen.storyboard; sourceTree = "<group>"; };
+		9EC1DBCB247ED192000CD7C0 /* InstructionLastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionLastViewController.swift; sourceTree = "<group>"; };
+		9EC1DBCD247ED1D0000CD7C0 /* InstructionAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionAssembler.swift; sourceTree = "<group>"; };
 		9EEE71F7241BB551007BA5AE /* EmotionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionType.swift; sourceTree = "<group>"; };
 		9EEE71F9241BB5AF007BA5AE /* PositionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionType.swift; sourceTree = "<group>"; };
 		9EEE71FB241BC14E007BA5AE /* FactorItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactorItem.swift; sourceTree = "<group>"; };
@@ -219,6 +264,23 @@
 		9EEE721B241D09FC007BA5AE /* SWOTCreatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOTCreatePresenter.swift; sourceTree = "<group>"; };
 		9EEE721D241D0A0A007BA5AE /* SWOTCreateRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOTCreateRouter.swift; sourceTree = "<group>"; };
 		9EEE721F241D0ED3007BA5AE /* SWOTCreateAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOTCreateAssembler.swift; sourceTree = "<group>"; };
+		9EF90CD5245983F500260A45 /* WeeksStatistics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeeksStatistics.storyboard; sourceTree = "<group>"; };
+		9EF90CD72459840B00260A45 /* WeeksStatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeksStatisticsViewController.swift; sourceTree = "<group>"; };
+		9EF90CDA245985A500260A45 /* WeeksStatisticsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeksStatisticsPresenter.swift; sourceTree = "<group>"; };
+		9EF90CDC245985AB00260A45 /* WeeksStatisticsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeksStatisticsRouter.swift; sourceTree = "<group>"; };
+		9EF90CDE2459861600260A45 /* WeeksStatisticsAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeksStatisticsAssembler.swift; sourceTree = "<group>"; };
+		9EF90CE3245AE50E00260A45 /* DrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
+		9EF90CE5245AE52000260A45 /* DrawScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DrawScreen.storyboard; sourceTree = "<group>"; };
+		9EF90CE7245AFB0E00260A45 /* SWOTItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOTItem.swift; sourceTree = "<group>"; };
+		9EF90CE9245AFE2B00260A45 /* SWOTCharacteristic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOTCharacteristic.swift; sourceTree = "<group>"; };
+		9EF90CEB245B39CD00260A45 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		9EF90CF0245B404500260A45 /* SWOTList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SWOTList.storyboard; sourceTree = "<group>"; };
+		9EF90CF2245B404E00260A45 /* SWOTListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOTListViewController.swift; sourceTree = "<group>"; };
+		9EF90CF4245B438B00260A45 /* SWOTListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOTListPresenter.swift; sourceTree = "<group>"; };
+		9EF90CF6245B43A700260A45 /* SWOTListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOTListRouter.swift; sourceTree = "<group>"; };
+		9EF90CF8245B43C700260A45 /* SWOTListAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOTListAssembler.swift; sourceTree = "<group>"; };
+		9EF90CFA245B444F00260A45 /* SWOTListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOTListCell.swift; sourceTree = "<group>"; };
+		9EF90CFC245B449A00260A45 /* SWOTCharacteristicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOTCharacteristicCell.swift; sourceTree = "<group>"; };
 		AB483745DBBA1E3414DE165E /* Pods-BetterLife2-BetterLife2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetterLife2-BetterLife2UITests.debug.xcconfig"; path = "Target Support Files/Pods-BetterLife2-BetterLife2UITests/Pods-BetterLife2-BetterLife2UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF32CE85FA0C3E4B59F096A8 /* Pods-BetterLife2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetterLife2.release.xcconfig"; path = "Target Support Files/Pods-BetterLife2/Pods-BetterLife2.release.xcconfig"; sourceTree = "<group>"; };
 		B06D3A14959A7D37CCB0AFA2 /* Pods-BetterLife2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetterLife2Tests.debug.xcconfig"; path = "Target Support Files/Pods-BetterLife2Tests/Pods-BetterLife2Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -275,7 +337,6 @@
 				B06D3A14959A7D37CCB0AFA2 /* Pods-BetterLife2Tests.debug.xcconfig */,
 				F4ECB0FE680A7224EA349138 /* Pods-BetterLife2Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -305,6 +366,7 @@
 			isa = PBXGroup;
 			children = (
 				9E0A1C9D23F4134F000EE8EC /* AppDelegate.swift */,
+				9E0A1CD023F41562000EE8EC /* MainTabBarViewController.swift */,
 				9EB52C232434930C0077B23D /* Extensions */,
 				9EEE7213241CEA1A007BA5AE /* Protocols */,
 				9E5CABCF240BCB6300D9E204 /* GlobalMethods */,
@@ -313,6 +375,7 @@
 				9E2D5716244AF1D4007F69C7 /* MainScreen */,
 				9EB26ECF240AED93002DD6F1 /* PeopleToRememberList */,
 				9EEE71FD241CE455007BA5AE /* SWOTCreate */,
+				9EF90CED245B401700260A45 /* SWOTList */,
 				9E0A1D0123FAE485000EE8EC /* PlaceToVisitList */,
 				9E0A1CF423FACC22000EE8EC /* FactorsList */,
 				9E0A1CE523F42866000EE8EC /* QLCreate */,
@@ -320,11 +383,17 @@
 				9E92CDA52433AF410049C675 /* TargetsList */,
 				9E57561C243E05E10066D11C /* Notes */,
 				9E57560D243C91500066D11C /* WeeksList */,
+				9EF90CD3245983CE00260A45 /* WeeksStatistics */,
+				9E711D58245201C800153B7C /* WeeksTotal */,
+				9EF90CE0245AE4A200260A45 /* DrawScreen */,
+				9EC1DBC6247C3B71000CD7C0 /* InstructionScreen */,
 				9E0A1CAB23F41350000EE8EC /* LaunchScreen.storyboard */,
 				9E0A1CAE23F41350000EE8EC /* Info.plist */,
 				9E0A1CA623F4134F000EE8EC /* BetterLife2.xcdatamodeld */,
 				9E0A1CA923F41350000EE8EC /* Assets.xcassets */,
 				9E33530F240FCF6A00166432 /* Main.storyboard */,
+				9E711D672452057800153B7C /* HotCode.swift */,
+				9EF90CEB245B39CD00260A45 /* Defaults.swift */,
 			);
 			path = BetterLife2;
 			sourceTree = "<group>";
@@ -365,6 +434,7 @@
 				9E0A1CD723F41AC0000EE8EC /* QLLifeScreen.storyboard */,
 				9E0A1CDF23F4249C000EE8EC /* QLLifeCell.swift */,
 				9E2D571A244AF7C5007F69C7 /* NoQLCell.swift */,
+				9E711D5D245202CB00153B7C /* QLLifeCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -421,6 +491,7 @@
 			children = (
 				9E0A1CF723FAD298000EE8EC /* FactorsListViewController.swift */,
 				9E0A1CF923FAD2AB000EE8EC /* FactorsListScreen.storyboard */,
+				9E711D562451FED600153B7C /* NoFactorsCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -466,10 +537,9 @@
 		9E2D5716244AF1D4007F69C7 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				9E0A1CD023F41562000EE8EC /* MainTabBarViewController.swift */,
+				9E84C2FC244CBBAE005E9581 /* MainScreenAssembler.swift */,
 				9E84C2F7244CB94D005E9581 /* Impl */,
 				9E2D5717244AF1DC007F69C7 /* View */,
-				9E84C2FC244CBBAE005E9581 /* MainScreenAssembler.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -498,7 +568,7 @@
 			children = (
 				9E57560F243C917B0066D11C /* WeeksListViewController.swift */,
 				9E575618243C94030066D11C /* WeeksList.storyboard */,
-				9E57561A243C95840066D11C /* WeeksListCell.swift */,
+				9E711D692452074900153B7C /* WeeksListCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -541,11 +611,40 @@
 			path = GlobalMethods;
 			sourceTree = "<group>";
 		};
+		9E711D58245201C800153B7C /* WeeksTotal */ = {
+			isa = PBXGroup;
+			children = (
+				9E711D65245203C100153B7C /* WeeksTotalAssembler.swift */,
+				9E711D5A245201EB00153B7C /* Impl */,
+				9E711D59245201DE00153B7C /* View */,
+			);
+			path = WeeksTotal;
+			sourceTree = "<group>";
+		};
+		9E711D59245201DE00153B7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9E711D5B2452025900153B7C /* WeeksTotal.storyboard */,
+				9E711D5F2452032E00153B7C /* WeeksTotalViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9E711D5A245201EB00153B7C /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				9E711D612452033D00153B7C /* WeeksTotalRouter.swift */,
+				9E711D632452036300153B7C /* WeeksTotalPresenter.swift */,
+			);
+			path = Impl;
+			sourceTree = "<group>";
+		};
 		9E7F1E502433C5FA0084F244 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				9E92CDAB2433B8070049C675 /* AddTargetCell.swift */,
 				9E2D571E244B077F007F69C7 /* AddTargetCell.xib */,
+				9E711D6B24520BC100153B7C /* MarkThisWeekCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -628,6 +727,7 @@
 				9EEE71FB241BC14E007BA5AE /* FactorItem.swift */,
 				9EEE720D241CE8CF007BA5AE /* HeaderItem.swift */,
 				9EEE720F241CE8EF007BA5AE /* TextFieldItem.swift */,
+				9E711D6D24521A1700153B7C /* WeekItem.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -653,12 +753,24 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		9EC1DBC6247C3B71000CD7C0 /* InstructionScreen */ = {
+			isa = PBXGroup;
+			children = (
+				9EC1DBC7247C3C59000CD7C0 /* InstructionViewController.swift */,
+				9EC1DBC9247C3C6C000CD7C0 /* InstructionScreen.storyboard */,
+				9EC1DBCB247ED192000CD7C0 /* InstructionLastViewController.swift */,
+				9EC1DBCD247ED1D0000CD7C0 /* InstructionAssembler.swift */,
+			);
+			path = InstructionScreen;
+			sourceTree = "<group>";
+		};
 		9EEE71FD241CE455007BA5AE /* SWOTCreate */ = {
 			isa = PBXGroup;
 			children = (
 				9EEE721F241D0ED3007BA5AE /* SWOTCreateAssembler.swift */,
 				9EEE7216241D0893007BA5AE /* Impl */,
 				9EEE71FE241CE474007BA5AE /* View */,
+				9EF90CE7245AFB0E00260A45 /* SWOTItem.swift */,
 			);
 			path = SWOTCreate;
 			sourceTree = "<group>";
@@ -670,6 +782,7 @@
 				9EEE71FF241CE48D007BA5AE /* SWOTCreateViewController.swift */,
 				9EEE7201241CE499007BA5AE /* SWOTCreateScreen.storyboard */,
 				9EEE7217241D08AD007BA5AE /* SWOTUIMapper.swift */,
+				9EF90CE9245AFE2B00260A45 /* SWOTCharacteristic.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -699,6 +812,89 @@
 			children = (
 				9EEE721B241D09FC007BA5AE /* SWOTCreatePresenter.swift */,
 				9EEE721D241D0A0A007BA5AE /* SWOTCreateRouter.swift */,
+			);
+			path = Impl;
+			sourceTree = "<group>";
+		};
+		9EF90CD3245983CE00260A45 /* WeeksStatistics */ = {
+			isa = PBXGroup;
+			children = (
+				9EF90CDE2459861600260A45 /* WeeksStatisticsAssembler.swift */,
+				9EF90CD92459859800260A45 /* Impl */,
+				9EF90CD4245983E600260A45 /* View */,
+			);
+			path = WeeksStatistics;
+			sourceTree = "<group>";
+		};
+		9EF90CD4245983E600260A45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9EF90CD5245983F500260A45 /* WeeksStatistics.storyboard */,
+				9EF90CD72459840B00260A45 /* WeeksStatisticsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9EF90CD92459859800260A45 /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				9EF90CDA245985A500260A45 /* WeeksStatisticsPresenter.swift */,
+				9EF90CDC245985AB00260A45 /* WeeksStatisticsRouter.swift */,
+			);
+			path = Impl;
+			sourceTree = "<group>";
+		};
+		9EF90CE0245AE4A200260A45 /* DrawScreen */ = {
+			isa = PBXGroup;
+			children = (
+				9EF90CE2245AE4B400260A45 /* Impl */,
+				9EF90CE1245AE4B000260A45 /* View */,
+			);
+			path = DrawScreen;
+			sourceTree = "<group>";
+		};
+		9EF90CE1245AE4B000260A45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9EF90CE3245AE50E00260A45 /* DrawViewController.swift */,
+				9EF90CE5245AE52000260A45 /* DrawScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9EF90CE2245AE4B400260A45 /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Impl;
+			sourceTree = "<group>";
+		};
+		9EF90CED245B401700260A45 /* SWOTList */ = {
+			isa = PBXGroup;
+			children = (
+				9EF90CF8245B43C700260A45 /* SWOTListAssembler.swift */,
+				9EF90CEF245B403A00260A45 /* Impl */,
+				9EF90CEE245B403300260A45 /* View */,
+			);
+			path = SWOTList;
+			sourceTree = "<group>";
+		};
+		9EF90CEE245B403300260A45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9EF90CF0245B404500260A45 /* SWOTList.storyboard */,
+				9EF90CF2245B404E00260A45 /* SWOTListViewController.swift */,
+				9EF90CFA245B444F00260A45 /* SWOTListCell.swift */,
+				9EF90CFC245B449A00260A45 /* SWOTCharacteristicCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9EF90CEF245B403A00260A45 /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				9EF90CF4245B438B00260A45 /* SWOTListPresenter.swift */,
+				9EF90CF6245B43A700260A45 /* SWOTListRouter.swift */,
 			);
 			path = Impl;
 			sourceTree = "<group>";
@@ -819,12 +1015,18 @@
 				9E335310240FCF6A00166432 /* Main.storyboard in Resources */,
 				9EEE7202241CE499007BA5AE /* SWOTCreateScreen.storyboard in Resources */,
 				9E57561F243E06050066D11C /* Notes.storyboard in Resources */,
+				9E711D5C2452025900153B7C /* WeeksTotal.storyboard in Resources */,
 				9E575619243C94030066D11C /* WeeksList.storyboard in Resources */,
 				9E92CDA82433AF690049C675 /* TargetsList.storyboard in Resources */,
 				9E0A1D0623FAE4B0000EE8EC /* PlaceToVisitListScreen.storyboard in Resources */,
 				9EB26ED5240AEDF9002DD6F1 /* PeopleToRemember.storyboard in Resources */,
+				9E711D5E245202CB00153B7C /* QLLifeCell.xib in Resources */,
 				9E0A1CAD23F41350000EE8EC /* LaunchScreen.storyboard in Resources */,
+				9EF90CE6245AE52000260A45 /* DrawScreen.storyboard in Resources */,
 				9E0A1CAA23F41350000EE8EC /* Assets.xcassets in Resources */,
+				9EF90CD6245983F500260A45 /* WeeksStatistics.storyboard in Resources */,
+				9EC1DBCA247C3C6C000CD7C0 /* InstructionScreen.storyboard in Resources */,
+				9EF90CF1245B404500260A45 /* SWOTList.storyboard in Resources */,
 				9E84C2FF244CC8C3005E9581 /* MainScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -956,13 +1158,23 @@
 				9E575613243C91EF0066D11C /* WeeksListPresenter.swift in Sources */,
 				9E0A1CE023F4249C000EE8EC /* QLLifeCell.swift in Sources */,
 				9E0A9B722440BE6400CA9C3E /* NotesViewController.swift in Sources */,
+				9E711D602452032E00153B7C /* WeeksTotalViewController.swift in Sources */,
+				9EC1DBCE247ED1D0000CD7C0 /* InstructionAssembler.swift in Sources */,
+				9EF90CF7245B43A700260A45 /* SWOTListRouter.swift in Sources */,
+				9E711D66245203C100153B7C /* WeeksTotalAssembler.swift in Sources */,
 				9EEE721C241D09FC007BA5AE /* SWOTCreatePresenter.swift in Sources */,
+				9EF90CD82459840B00260A45 /* WeeksStatisticsViewController.swift in Sources */,
+				9EC1DBC8247C3C59000CD7C0 /* InstructionViewController.swift in Sources */,
 				9EB26ED7240AEE9B002DD6F1 /* PeopleToRememberPresenter.swift in Sources */,
 				9EEE7210241CE8EF007BA5AE /* TextFieldItem.swift in Sources */,
 				9E0A1D0023FAD420000EE8EC /* FactorsListAssembler.swift in Sources */,
+				9E711D6A2452074900153B7C /* WeeksListCell.swift in Sources */,
+				9E711D6C24520BC100153B7C /* MarkThisWeekCell.swift in Sources */,
+				9EF90CFD245B449A00260A45 /* SWOTCharacteristicCell.swift in Sources */,
 				9E92CDAC2433B8070049C675 /* AddTargetCell.swift in Sources */,
 				9EB52C202434773F0077B23D /* DateItemGenerator.swift in Sources */,
 				9E0A1CEC23F42991000EE8EC /* QLCreateAssembler.swift in Sources */,
+				9EF90CDF2459861600260A45 /* WeeksStatisticsAssembler.swift in Sources */,
 				9E0A1D0D23FAEA50000EE8EC /* PlaceToVisitListAssembler.swift in Sources */,
 				9E0A1D0B23FAE515000EE8EC /* PlaceToVisitListRouter.swift in Sources */,
 				9E0ECAED23FEE35700801AC2 /* QLListViewController.swift in Sources */,
@@ -971,8 +1183,10 @@
 				9E5CABD2240BCB8300D9E204 /* UserDefaultsWrapper.swift in Sources */,
 				9EEE7206241CE7E6007BA5AE /* SWOTTextFieldCell.swift in Sources */,
 				9E0A1CDE23F41D48000EE8EC /* QLListRouter.swift in Sources */,
+				9E711D6E24521A1700153B7C /* WeekItem.swift in Sources */,
 				9E2D571D244AFAC3007F69C7 /* UIKitExtension.swift in Sources */,
 				9E0A1D0423FAE4A8000EE8EC /* PlaceToVisitListViewController.swift in Sources */,
+				9EF90CEC245B39CD00260A45 /* Defaults.swift in Sources */,
 				9E0A1CA823F4134F000EE8EC /* BetterLife2.xcdatamodeld in Sources */,
 				9EEE71F8241BB551007BA5AE /* EmotionType.swift in Sources */,
 				9E7F1E4F2433C45F0084F244 /* TargetsListUIMapper.swift in Sources */,
@@ -983,8 +1197,10 @@
 				9EEE7218241D08AD007BA5AE /* SWOTUIMapper.swift in Sources */,
 				9E575615243C92B80066D11C /* WeeksListRouter.swift in Sources */,
 				9EEE71FA241BB5AF007BA5AE /* PositionType.swift in Sources */,
+				9E711D642452036300153B7C /* WeeksTotalPresenter.swift in Sources */,
 				9E0A1D0923FAE508000EE8EC /* PlaceToVisitListPresenter.swift in Sources */,
 				9E92CDB42433B9430049C675 /* TargetsListRouter.swift in Sources */,
+				9EF90CF3245B404E00260A45 /* SWOTListViewController.swift in Sources */,
 				9E84C2FB244CB980005E9581 /* MainScreenRouter.swift in Sources */,
 				9EB52C22243493080077B23D /* FoundationExtension.swift in Sources */,
 				9EEE7208241CE7F4007BA5AE /* SWOTCreateButtonCell.swift in Sources */,
@@ -994,17 +1210,20 @@
 				9EB26EDB240AEEAC002DD6F1 /* PeopleToRememberRouter.swift in Sources */,
 				9E0A1CE223F42513000EE8EC /* QLItem.swift in Sources */,
 				9E0A9B742440BF7500CA9C3E /* NotesPresenter.swift in Sources */,
+				9E711D572451FED600153B7C /* NoFactorsCell.swift in Sources */,
 				9E0A1CF323FAC55F000EE8EC /* QLCreateRouter.swift in Sources */,
+				9EF90CE4245AE50E00260A45 /* DrawViewController.swift in Sources */,
 				9EB52C1A24346F3A0077B23D /* DateType.swift in Sources */,
 				9EEE7220241D0ED3007BA5AE /* SWOTCreateAssembler.swift in Sources */,
-				9E57561B243C95840066D11C /* WeeksListCell.swift in Sources */,
 				9EB26ED9240AEEA4002DD6F1 /* PeopleToRememberInteractor.swift in Sources */,
 				9E92CDAE2433B8220049C675 /* TargetItem.swift in Sources */,
+				9EF90CEA245AFE2B00260A45 /* SWOTCharacteristic.swift in Sources */,
 				9E575610243C917B0066D11C /* WeeksListViewController.swift in Sources */,
 				9EB26EDF240AF3C4002DD6F1 /* CityItem.swift in Sources */,
 				9E5CABD4240BCDB700D9E204 /* CoreDataWrapper.swift in Sources */,
 				9E575617243C93470066D11C /* WeeksListAssembler.swift in Sources */,
 				9E84C2FD244CBBAE005E9581 /* MainScreenAssembler.swift in Sources */,
+				9EF90CDB245985A500260A45 /* WeeksStatisticsPresenter.swift in Sources */,
 				9E0A1CE423F425CB000EE8EC /* QLLifeCategory.swift in Sources */,
 				9EEE7200241CE48D007BA5AE /* SWOTCreateViewController.swift in Sources */,
 				9E0A9B762440BFE100CA9C3E /* NotesAssembler.swift in Sources */,
@@ -1016,17 +1235,25 @@
 				9E0A1CF823FAD298000EE8EC /* FactorsListViewController.swift in Sources */,
 				9E0A1CF123FAC553000EE8EC /* QLCreatePresenter.swift in Sources */,
 				9EEE7204241CE7CF007BA5AE /* SWOTHeaderCell.swift in Sources */,
+				9EF90CFB245B444F00260A45 /* SWOTListCell.swift in Sources */,
 				9E0A1CFC23FAD2DA000EE8EC /* FactorsListPresenter.swift in Sources */,
+				9EF90CDD245985AB00260A45 /* WeeksStatisticsRouter.swift in Sources */,
 				9E5CABD6240BD73500D9E204 /* ItemsType.swift in Sources */,
 				9E0A1CE823F428A4000EE8EC /* QLCreateViewController.swift in Sources */,
+				9EF90CE8245AFB0E00260A45 /* SWOTItem.swift in Sources */,
 				9E0A1CD123F41562000EE8EC /* MainTabBarViewController.swift in Sources */,
+				9E711D622452033D00153B7C /* WeeksTotalRouter.swift in Sources */,
 				9E84C2F9244CB964005E9581 /* MainScreenPresenter.swift in Sources */,
+				9EF90CF9245B43C700260A45 /* SWOTListAssembler.swift in Sources */,
+				9EC1DBCC247ED192000CD7C0 /* InstructionLastViewController.swift in Sources */,
 				9EB52C1E243472190077B23D /* DateItem.swift in Sources */,
 				9EB26EDD240AF027002DD6F1 /* PeopleToRememberAssembler.swift in Sources */,
 				9E0A1CDA23F41AE2000EE8EC /* QLListAssembler.swift in Sources */,
 				9E0A1C9E23F4134F000EE8EC /* AppDelegate.swift in Sources */,
 				9EB26EE1240AF698002DD6F1 /* ActionType.swift in Sources */,
+				9E711D682452057800153B7C /* HotCode.swift in Sources */,
 				9E92CDAA2433AF850049C675 /* TargetsListViewController.swift in Sources */,
+				9EF90CF5245B438B00260A45 /* SWOTListPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

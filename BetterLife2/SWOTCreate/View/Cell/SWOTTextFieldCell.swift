@@ -13,8 +13,11 @@ class SWOTTextFieldCell: UITableViewCell, ComponentCell {
     
     @IBOutlet weak var textField: UITextField!
     
+    var emotion: EmotionType!
+    
     func initCell(item: Any) {
         guard let item = item as? TextFieldItem else { return }
+        emotion = item.emotion
         textField.placeholder = item.placeHolder
     }
     

@@ -16,14 +16,23 @@ class MainScreenViewController: UIViewController {
     @IBOutlet weak var instructionView: UIView!
     @IBOutlet weak var todayTableView: UITableView!
     @IBOutlet weak var todayTaskView: UIView!
-    @IBOutlet weak var SWATVIew: UIView!
+    @IBOutlet weak var SWOTView: UIView!
     @IBOutlet weak var today2View: UIView!
+    @IBOutlet weak var cityView: UIView!
+    @IBOutlet weak var peopleView: UIView!
+    @IBOutlet weak var backView: UIView!
     
+    @IBOutlet weak var openInstructionButton: UIButton!
+    @IBOutlet weak var openMySWOTListButton: UIButton!
+    @IBOutlet weak var SWOTButton: UIButton!
+    @IBOutlet weak var openCityListButton: UIButton!
+    @IBOutlet weak var openPeopleListButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
         setupViews()
         presenter.requestList()
+        title = "Сегодня (\(Date.dateForMain()))"
         // Do any additional setup after loading the view.
     }
     
@@ -41,16 +50,45 @@ class MainScreenViewController: UIViewController {
         todayTableView.reloadData()
         
     }
+
     
     func setupViews() {
-        SWATVIew.setRound()
+        SWOTView.setRound()
         todayTaskView.setRound()
         instructionView.setRound()
         today2View.roundCorners(corners: [.topLeft, .topRight], radius: 10.0)
+        cityView.setRound()
+        peopleView.setRound()
+        
+        SWOTButton.setRound()
+        openCityListButton.setRound()
+        openPeopleListButton.setRound()
+        openInstructionButton.setRound()
+        openMySWOTListButton.setRound()
         
         setupTableView()
+        setupColors()
         
     }
+    
+    func setupColors() {
+        SWOTButton.backgroundColor = Defaults.mainColor
+        SWOTButton.backgroundColor = Defaults.mainColor
+        openCityListButton.backgroundColor = Defaults.mainColor
+        openPeopleListButton.backgroundColor = Defaults.mainColor
+        openInstructionButton.backgroundColor = Defaults.mainColor
+        openMySWOTListButton.backgroundColor = Defaults.mainColor
+        //self.view.backgroundColor = Defaults.mainColor
+        //backView.backgroundColor = Defaults.mainColor
+    }
+    
+    func showAlert(value: String, title: String) {
+           let alert = UIAlertController(title: title, message: value, preferredStyle: .alert)
+           alert.addAction(UIAlertAction(title: "Ок", style: .default, handler: nil))
+           self.present(alert, animated: true, completion: nil)
+       }
+       
+    
     func showAlertWithTF(date: Date, position: IndexPath) {
         //Step : 1
         let alert = UIAlertController(title: "Новая цель", message: "Введите задачу которую хотите выполнить", preferredStyle: UIAlertController.Style.alert )
@@ -64,10 +102,6 @@ class MainScreenViewController: UIViewController {
          // self.tableView.reloadRows(at: [position], with: .top)
             
           self.todayTableView.reloadData()
-        // self.city(CityItem(id: UserDefaultsWrapper.lastCardIndex(of: .city),
-           //                 name: textField.text!,
-           //                 isSelected: false), action: .create)
-         //self.updateTableView()
         
         }
         
@@ -90,12 +124,31 @@ class MainScreenViewController: UIViewController {
     
     
     @IBAction func tasksTodayTapped(_ sender: Any) {
+        presenter.openTodayTasks()
     }
     
-    @IBAction func AnalysSWOTButtonTapped(_ sender: Any) {
+    @IBAction func openSWOTButtonTapped(_ sender: Any) {
         presenter.openCreateSWOT()
     }
     
+    @IBAction func openSWOTInfoButtonTapped(_ sender: Any) {
+        self.showAlert(value: "В данном анализе вы указываете важность и удовлетворенность для каждой характеристики от 1 до 5, после чего дополнительно пишете Положительный опыт (развивать и использовать), Положительный опыт (развивать и использовать) и Выводы", title: "Описание")
+    }
+    
+    @IBAction func openMySWOTListButtonTapped(_ sender: Any) {
+        self.presenter.openSWOTList()
+    }
+    
+    @IBAction func openCityListButtonTapped(_ sender: Any) {
+        presenter.openCityList()
+    }
+    
+    @IBAction func openPeopleListButtonTapped(_ sender: Any) {
+        presenter.openPeopleList()
+    }
+    @IBAction func openInstructionButtonTapped(_ sender: Any) {
+        presenter.openInstruction()
+    }
 }
 
 

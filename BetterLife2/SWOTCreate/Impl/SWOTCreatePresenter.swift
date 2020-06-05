@@ -24,28 +24,31 @@ class SWOTCreatePresenter {
         list.append(HeaderItem(text: "Ядро качества жизни"))
         
         let coreList: [String] = ["Тело", "Разум", "Эмоции", "Воля", "Дух"]
-        var k = 1
+        var k = 0
         for i in coreList {
-            list.append(QLItem(id: k, name: i, satisfaction: 3, important: 3, category: .none, comment: ""))
+            list.append(SWOTCharacteristic(id: k, name: i, important: 3, happiness: 3))//QLItem(id: k, name: i, satisfaction: 3, important: 3, category: .none, comment: ""))
             k += 1
         }
         
         list.append(HeaderItem(text: "Пространства - сферы, составляющие качество жизни"))
         
         let spaceList: [String] = ["Интимное", "Семья", "Этнос", "Соседи", "Отдых", "Работа/финансы", "Общество", "Государство", "Цивилизация", "Непознанное (то, во что веришь)"]
-        k = 1
         for i in spaceList {
-           list.append(QLItem(id: k, name: i, satisfaction: 3, important: 3, category: .none, comment: ""))
+           list.append(SWOTCharacteristic(id: k, name: i, important: 3, happiness: 3))//list.append(QLItem(id: k, name: i, satisfaction: 3, important: 3, category: .none, comment: ""))
            k += 1
         }
         
-        list.append(TextFieldItem(placeHolder: "Положительный опыт (развивать и использовать)"))
-        list.append(TextFieldItem(placeHolder: "Отрицательный опыт (исключать возможность повторения)"))
-        list.append(TextFieldItem(placeHolder: "Выводы"))
+        list.append(TextFieldItem(emotion: .positive, placeHolder: "Положительный опыт (развивать и использовать)"))
+        list.append(TextFieldItem(emotion: .negative, placeHolder: "Отрицательный опыт (исключать возможность повторения)"))
+        list.append(TextFieldItem(emotion: .all, placeHolder: "Выводы"))
         
         list.append("Создать")
         
         
         view.updateTableView(list: list)
+    }
+    
+    func createSWOT(item: SWOTItem) {
+        UserDefaultsWrapper.saveSWOTItem(item)
     }
 }

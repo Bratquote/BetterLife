@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Weeks List View Controller-->
+        <!--Недели-->
         <scene sceneID="nqN-AZ-tfg">
             <objects>
                 <viewController storyboardIdentifier="WeeksListViewController" id="gbz-XR-3n9" customClass="WeeksListViewController" customModule="BetterLife2" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jX8-ye-AEg">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeeksListCell" rowHeight="83" id="cCS-4O-yc3" customClass="WeeksListCell" customModule="BetterLife2" customModuleProvider="target">
@@ -82,12 +82,30 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Khf-BP-aWp"/>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="Rhe-fh-hig"/>
+                    <navigationItem key="navigationItem" title="Недели" largeTitleDisplayMode="always" id="Rhe-fh-hig"/>
                     <connections>
                         <outlet property="tableView" destination="jX8-ye-AEg" id="XzT-wk-t7c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kam-Ul-Zz1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1855.072463768116" y="72.991071428571431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="w4E-SG-Bk2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FMh-aJ-w8q" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bok-56-WE5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gbz-XR-3n9" kind="relationship" relationship="rootViewController" id="28L-Ri-lLC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zjo-9A-lCg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="72.991071428571431"/>
         </scene>

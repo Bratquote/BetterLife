@@ -52,7 +52,7 @@ public class MainTabBarViewController: UITabBarController {
         let targetsListVC2 = WeeksListAssembler().assemble()
         let targetsNavigator2 = UINavigationController()
         targetsNavigator2.viewControllers = [targetsListVC2]
-        targetsNavigator2.tabBarItem = UITabBarItem(title: "Цели2", image: UIImage(named: "icons8-wednesday"), tag: 5)
+        targetsNavigator2.tabBarItem = UITabBarItem(title: "Недели", image: UIImage(named: "icons8-wednesday"), tag: 5)
         
         
         let factorsVC = FactorsListAssembler().assemble()
@@ -61,6 +61,22 @@ public class MainTabBarViewController: UITabBarController {
         factorsNavigator.tabBarItem = UITabBarItem(title: "Факторы", image: UIImage(named: "icons8-facebook_like"), tag: 6)
         
         
-        self.viewControllers = [mainScreenNavigator, QLNavigator, factorsNavigator, targetsNavigator, targetsNavigator2, placeNavigator, peopleNavigator, SWOTNavigator]
+        let weeksTotalVC = WeeksTotalAssembler().assemble()
+        let weeksTotalNavigator = UINavigationController()
+        weeksTotalNavigator.viewControllers = [weeksTotalVC]
+        weeksTotalNavigator.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 7)
+        
+        
+        let weeksStatisticsVC = WeeksStatisticsAssmembler().assemble()
+        let weeksStatisticsNav = UINavigationController()
+        weeksStatisticsNav.viewControllers = [weeksStatisticsVC]
+        weeksStatisticsNav.tabBarItem = UITabBarItem(tabBarSystemItem: .mostRecent, tag: 8)
+        
+        
+        let SWOTListVC = SWOTListAssembler().assemble()
+        SWOTListVC.tabBarItem = UITabBarItem(tabBarSystemItem: .topRated, tag: 9)
+        
+        
+        self.viewControllers = [mainScreenNavigator, QLNavigator, factorsNavigator, targetsNavigator, targetsNavigator2, placeNavigator, peopleNavigator, SWOTNavigator, weeksTotalNavigator, weeksStatisticsNav, SWOTListVC]
     }
 }

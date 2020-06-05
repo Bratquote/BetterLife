@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Анализ недель-->
+        <scene sceneID="xrp-IX-3hF">
+            <objects>
+                <viewController storyboardIdentifier="WeeksStatisticsViewController" id="PCm-AQ-yeY" customClass="WeeksStatisticsViewController" customModule="BetterLife2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aei-Iy-mc3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLS-no-Am0" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="88" width="414" height="642"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="ixS-bo-kdf">
+                                <rect key="frame" x="20" y="746" width="394" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="UxI-fK-0WT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wLS-no-Am0" firstAttribute="leading" secondItem="P9D-GW-KHe" secondAttribute="leading" id="3x4-gd-ZaC"/>
+                            <constraint firstItem="wLS-no-Am0" firstAttribute="top" secondItem="P9D-GW-KHe" secondAttribute="top" id="7mz-cE-3YG"/>
+                            <constraint firstItem="P9D-GW-KHe" firstAttribute="trailing" secondItem="ixS-bo-kdf" secondAttribute="trailing" id="OiT-uF-CcO"/>
+                            <constraint firstItem="P9D-GW-KHe" firstAttribute="bottom" secondItem="ixS-bo-kdf" secondAttribute="bottom" constant="16" id="X5O-YT-Q05"/>
+                            <constraint firstItem="ixS-bo-kdf" firstAttribute="top" secondItem="wLS-no-Am0" secondAttribute="bottom" constant="16" id="hS5-JI-DLN"/>
+                            <constraint firstItem="P9D-GW-KHe" firstAttribute="trailing" secondItem="wLS-no-Am0" secondAttribute="trailing" id="jBx-NJ-nWu"/>
+                            <constraint firstItem="ixS-bo-kdf" firstAttribute="leading" secondItem="P9D-GW-KHe" secondAttribute="leading" constant="20" id="roR-dM-chL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="P9D-GW-KHe"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Анализ недель" id="g82-KR-kqh"/>
+                    <connections>
+                        <outlet property="bottomDescriptionLabel" destination="ixS-bo-kdf" id="F5p-ka-hal"/>
+                        <outlet property="lineChartView" destination="wLS-no-Am0" id="R13-Wf-6Jp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gxq-TE-JRL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1037.68115942029" y="112.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BOg-nV-8Gg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fkN-70-RxO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xHp-C0-PTL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PCm-AQ-yeY" kind="relationship" relationship="rootViewController" id="Ksr-bC-66y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a0x-0L-Ssh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="127.53623188405798" y="112.5"/>
+        </scene>
+    </scenes>
+</document>

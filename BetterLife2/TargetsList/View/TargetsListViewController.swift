@@ -24,15 +24,16 @@ class TargetsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.prefersLargeTitles = true
         setupTableView()
         setupLabels()
-        
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         presenter.requestList(item: dateItem)
+        view.layoutIfNeeded()
     }
     
     
@@ -45,6 +46,7 @@ class TargetsListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "AddTargetCell", bundle: Bundle.main), forCellReuseIdentifier: "AddTargetCell")
+        tableView.register(UINib(nibName: "MarkThisWeek", bundle: Bundle.main), forCellReuseIdentifier: "MarkThisWeek")
     }
     
     func setupLabels() {
@@ -131,12 +133,21 @@ extension TargetsListViewController: UITableViewDelegate, UITableViewDataSource 
         switch item {
         case is DateItem:
             cell.textLabel?.text = (item as! DateItem).value// + " \((item as! DateItem).date)"
+            cell.backgroundColor = Defaults.mainColor
+            cell.textLabel?.textColor = UIColor.white
         case is TargetItem:
             cell.textLabel?.text = (item as! TargetItem).name// + (item as! TargetItem).date.getDateString()
             if (item as! TargetItem).isCompleted {
                 cell.accessoryType = .checkmark
             } else {
                 cell.accessoryType = .none
+            }
+        case is String:
+            (cell as! MarkThisWeekCell).initCell(value: item as! String)
+            (cell as! MarkThisWeekCell).updateValue = {
+                let i = (cell as! MarkThisWeekCell).iValue
+                let h = (cell as! MarkThisWeekCell).hValue
+                self.presenter.updateWeekMark(item: self.dateItem, important: i+1, happiness: h+1)
             }
         default:
             break
@@ -169,5 +180,23 @@ extension TargetsListViewController: UITableViewDelegate, UITableViewDataSource 
             break
         }
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if list[indexPath.row] is TargetItem {
+              return true
+              } else {
+                  return false
+              }
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+              if (editingStyle == .delete) {
+                presenter.deleteTarget(item: list[indexPath.row] as! TargetItem)
+                  list.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .right)
+                  //tableView.reloadData()
+                  // handle delete (by removing the data from your array and updating the tableview)
+              }
+          }
     
 }

@@ -14,13 +14,18 @@ class SWOTCreateViewController: UIViewController {
     var uiMapper: SWOTUIMapper!
     var list: [Any] = []
     
+    var item: SWOTItem!
+    
     
     @IBOutlet weak var tableView: UITableView!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        item = SWOTItem()
+        navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.prefersLargeTitles = true
+        view.layoutIfNeeded()
         setupTableView()
         presenter.requestData()
         
@@ -39,10 +44,30 @@ class SWOTCreateViewController: UIViewController {
     }
     
     func createButtonTapped() {
-        
+        let p = tableView.cellForRow(at: IndexPath(row: list.count - 4, section: 0))
+        if (p as! SWOTTextFieldCell).emotion == EmotionType.positive {
+            item.positiveText = (p as! SWOTTextFieldCell).textField.text ?? ""
+        }
+        let n = tableView.cellForRow(at: IndexPath(row: list.count - 3, section: 0))
+        if (n as! SWOTTextFieldCell).emotion == EmotionType.negative {
+            item.negativeText = (n as! SWOTTextFieldCell).textField.text ?? ""
+        }
+        let a = tableView.cellForRow(at: IndexPath(row: list.count - 2, section: 0))
+        if (a as! SWOTTextFieldCell).emotion == EmotionType.all {
+            item.conclusionText = (a as! SWOTTextFieldCell).textField.text ?? ""
+        }
+        showAlert(value: "SWOT-анализ создан", title: "Успешно")
+        presenter.createSWOT(item: item)
+    }
+    func showAlert(value: String, title: String) {
+        let alert = UIAlertController(title: title, message: value, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ок", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func infoButtonTapped(_ sender: Any) {
+        self.showAlert(value: "В данном анализе вы указываете важность и удовлетворенность для каждой характеристики от 1 до 5, после чего дополнительно пишете Положительный опыт (развивать и использовать), Положительный опыт (развивать и использовать) и Выводы", title: "Описание")
+        
     }
     
 }
@@ -59,6 +84,12 @@ extension SWOTCreateViewController: UITableViewDelegate, UITableViewDataSource {
         
         (cell as? SWOTCreateButtonCell)?.action = {
             self.createButtonTapped()
+        }
+        
+        (cell as? SWOTStepperCell)?.updated = {
+            let obj = (cell as? SWOTStepperCell)?.object
+            self.item.charsList[obj!.id] = obj!
+            print(self.item)
         }
         
         

@@ -37,4 +37,24 @@ class MainScreenPresenter {
     func openCreateSWOT() {
         router.openCreateSWOT()
     }
+    
+    func openCityList() {
+        router.openCityList()
+    }
+    
+    func openPeopleList() {
+        router.openPeopleList()
+    }
+    
+    func openTodayTasks() {
+        router.openTodayTasks()
+    }
+    
+    func openInstruction() {
+        router.openInstruction()
+    }
+    
+    func openSWOTList() {
+        router.openSWOTList()
+    }
 }

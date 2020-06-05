@@ -16,14 +16,15 @@ class SWOTStepperCell: UITableViewCell, ComponentCell {
     @IBOutlet weak var importantStepper: UIStepper!
     @IBOutlet weak var satisfactionStepper: UIStepper!
     
-    var object: QLItem!
+    var object: SWOTCharacteristic!
+    var updated: (() -> Void)!
     
     func initCell(item: Any) {
-        guard let item = item as? QLItem else { return }
+        guard let item = item as? SWOTCharacteristic else { return }
         object = item
         nameLabel.text = item.name
-        importantLabel.text = "3"
-        satisfactionLabel.text = "3"
+        importantLabel.text = "\(item.important)"
+        satisfactionLabel.text = "\(item.happiness)"
         
         setupSteppers()
     }
@@ -32,11 +33,11 @@ class SWOTStepperCell: UITableViewCell, ComponentCell {
     func setupSteppers() {
         importantStepper.maximumValue = 5
         importantStepper.minimumValue = 1
-        importantStepper.value = 3
+        importantStepper.value = Double(object.important)
         
         satisfactionStepper.maximumValue = 5
         satisfactionStepper.minimumValue = 1
-        satisfactionStepper.value = 3
+        satisfactionStepper.value = Double(object.happiness)
     }
 
     override func awakeFromNib() {
@@ -52,10 +53,16 @@ class SWOTStepperCell: UITableViewCell, ComponentCell {
     @IBAction func importantStepperTapped(_ sender: UIStepper) {
         importantLabel.text = Int(sender.value).description
         object.important = Int(sender.value)
+        if let action = updated {
+            action()
+        }
     }
     @IBAction func satisfactionStepperTapped(_ sender: UIStepper) {
         satisfactionLabel.text = Int(sender.value).description
-        object.satisfaction = Int(sender.value)
+        object.happiness = Int(sender.value)
+        if let action = updated {
+            action()
+        }
     }
     
 }

@@ -11,8 +11,8 @@ import UIKit
 class NoQLCell: UITableViewCell {
 
   
-    @IBOutlet weak var whatIsQLButton: UILabel!
-    
+    @IBOutlet weak var whatIsQLButton: UIButton!
+    @IBOutlet weak var addQLButton: UIButton!
     
     var createQL: (() -> Void)!
     var whatIsQL: (() -> Void)!
@@ -20,11 +20,8 @@ class NoQLCell: UITableViewCell {
     override func awakeFromNib() {
           super.awakeFromNib()
         whatIsQLButton.setRound()
-        whatIsQLButton.setDefaulColor()
-        let whatIsTap = UITapGestureRecognizer(target: self, action: #selector(self.whatIsTapped))
-        whatIsQLButton.addGestureRecognizer(whatIsTap)
-//        vkImage.addGestureRecognizer(vkTap)
-//        vkImage.isUserInteractionEnabled = true
+        addQLButton.setRound()
+        whatIsQLButton.backgroundColor = Defaults.mainColor
       }
 
     @objc func whatIsTapped() {
@@ -33,6 +30,11 @@ class NoQLCell: UITableViewCell {
         }
     }
 
+    @IBAction func whatIsButtonTapped(_ sender: Any) {
+        if let action = whatIsQL {
+            action()
+        }
+    }
     
     @IBAction func addQLButtonTapped(_ sender: Any) {
         if let action = createQL {

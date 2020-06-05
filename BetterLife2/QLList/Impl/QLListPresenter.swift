@@ -24,6 +24,14 @@ class QLListPresenter {
     }
     
     func openQLCreate(item: QLItem? = nil) {
+        if item != nil {
+            router.openQLEdit(item: item!)
+        } else {
         router.openQLCreate()
+        }
+    }
+    
+    func deleteQL(item: QLItem) {
+        CoreDataWrapper.updateQLItem(item, action: .delete)
     }
 }

@@ -21,6 +21,8 @@ class TargetListUIMapper: BaseUIMapper {
             return "TargetCell"
         case is Date:
             return "AddTargetCell"
+        case is String:
+            return "MarkThisWeekCell"
         default:
            return "TargetHeader"
         }

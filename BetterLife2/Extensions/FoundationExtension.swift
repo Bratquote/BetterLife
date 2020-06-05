@@ -21,6 +21,17 @@ extension Date {
         self = date!
     }
     
+    init(dateString: String) {
+        var components = DateComponents()
+        components.timeZone = TimeZone(secondsFromGMT: 0)
+        components.day = Int(dateString.split(separator: ".")[0]) ?? 1
+        components.year = Int(dateString.split(separator: ".")[2]) ?? 1
+        components.month = Int(dateString.split(separator: ".")[1]) ?? 1
+        
+        let date = Calendar.current.date(from: components)
+        self = date!
+    }
+    
     init(noTime: Bool) {
         self.init()
         
@@ -73,6 +84,13 @@ extension Date {
         let components = calendar.component(.day, from: self)
         
         return components
+    }
+    
+    static func dateForMain() -> String {
+        let today = Date()
+        let formatter1 = DateFormatter()
+        formatter1.dateFormat = "dd MMMM"
+        return formatter1.string(from: today)
     }
     
     

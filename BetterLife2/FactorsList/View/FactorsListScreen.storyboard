@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cgH-Y4-Gv0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cgH-Y4-Gv0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -54,6 +54,57 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoFactorsCell" rowHeight="391" id="13e-Vk-WwC" customClass="NoFactorsCell" customModule="BetterLife2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="90" width="414" height="391"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="13e-Vk-WwC" id="BFC-At-AWR">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="391"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YnU-pG-GaO">
+                                                    <rect key="frame" x="60.5" y="229.5" width="293" height="60"/>
+                                                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="khJ-Nd-8c5"/>
+                                                        <constraint firstAttribute="width" constant="293" id="knP-kp-cbd"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <state key="normal" title="Добавить фактор">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="addFactorButtonTapped:" destination="13e-Vk-WwC" eventType="touchUpInside" id="bI1-02-NBa"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwT-Gc-6Hk">
+                                                    <rect key="frame" x="60.5" y="95.5" width="293" height="60"/>
+                                                    <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="dFe-vL-qoH"/>
+                                                        <constraint firstAttribute="width" constant="293" id="kt0-l2-6RJ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <state key="normal" title="Что здесь должно быть?">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="whatIsButtonTapped:" destination="13e-Vk-WwC" eventType="touchUpInside" id="yGe-bf-B3Q"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lwT-Gc-6Hk" firstAttribute="centerX" secondItem="BFC-At-AWR" secondAttribute="centerX" id="15Q-qB-KPn"/>
+                                                <constraint firstItem="lwT-Gc-6Hk" firstAttribute="centerY" secondItem="BFC-At-AWR" secondAttribute="centerY" constant="-70" id="4cZ-tC-PVG"/>
+                                                <constraint firstItem="YnU-pG-GaO" firstAttribute="centerY" secondItem="BFC-At-AWR" secondAttribute="centerY" constant="64" id="Uv0-el-pfE"/>
+                                                <constraint firstItem="YnU-pG-GaO" firstAttribute="centerX" secondItem="BFC-At-AWR" secondAttribute="centerX" id="zUh-WE-vBZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outlet property="addFactorButton" destination="YnU-pG-GaO" id="OAa-Eq-FaU"/>
+                                            <outlet property="whatIsButton" destination="lwT-Gc-6Hk" id="DIj-Cz-5OI"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
